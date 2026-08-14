@@ -1,4 +1,4 @@
-# 🇮🇳 Independence Day Celebration Website
+#  Independence Day Celebration Website
 
 A modern and responsive **Independence Day Celebration Website** built using HTML, CSS, and JavaScript and deployed using a complete **DevOps CI/CD pipeline**.
 
