@@ -1,0 +1,1793 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Happy Independence Day 🇮🇳</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: #050505;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        /* =========================
+           BACKGROUND
+        ========================== */
+
+        .background {
+            position: fixed;
+            inset: 0;
+            z-index: -10;
+
+            background:
+                linear-gradient(
+                    180deg,
+                    #ff9933 0%,
+                    #ff9933 33%,
+                    #ffffff 33%,
+                    #ffffff 66%,
+                    #138808 66%,
+                    #138808 100%
+                );
+
+            opacity: 0.08;
+        }
+
+        .glow {
+            position: fixed;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            filter: blur(120px);
+            opacity: 0.25;
+            z-index: -5;
+
+            animation: floatGlow 8s ease-in-out infinite alternate;
+        }
+
+        .glow.orange {
+            background: #ff9933;
+            top: -150px;
+            left: -150px;
+        }
+
+        .glow.green {
+            background: #138808;
+            right: -150px;
+            bottom: -150px;
+            animation-delay: 2s;
+        }
+
+        @keyframes floatGlow {
+
+            from {
+                transform: translate(0, 0) scale(1);
+            }
+
+            to {
+                transform: translate(50px, 40px) scale(1.2);
+            }
+
+        }
+
+        /* =========================
+           PARTICLES
+        ========================== */
+
+        #particles {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 20;
+        }
+
+        .particle {
+            position: absolute;
+            border-radius: 50%;
+
+            animation:
+                particleFloat
+                linear
+                infinite;
+        }
+
+        @keyframes particleFloat {
+
+            from {
+                transform: translateY(110vh);
+                opacity: 0;
+            }
+
+            15% {
+                opacity: 1;
+            }
+
+            85% {
+                opacity: 1;
+            }
+
+            to {
+                transform: translateY(-10vh);
+                opacity: 0;
+            }
+
+        }
+
+        /* =========================
+           NAVBAR
+        ========================== */
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+
+            width: 100%;
+
+            z-index: 100;
+
+            padding: 18px 7%;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            background: rgba(0, 0, 0, 0.35);
+
+            backdrop-filter: blur(15px);
+
+            border-bottom:
+                1px solid
+                rgba(255,255,255,0.12);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #ff9933,
+                    white,
+                    #138808
+                );
+
+            -webkit-background-clip: text;
+
+            color: transparent;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+
+            margin-left: 25px;
+
+            font-weight: 600;
+
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #ff9933;
+        }
+
+        /* =========================
+           HERO
+        ========================== */
+
+        .hero {
+
+            min-height: 100vh;
+
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+
+            padding:
+                120px 20px 60px;
+
+            position: relative;
+        }
+
+        .hero-content {
+
+            max-width: 1000px;
+
+            animation:
+                heroEntrance
+                1.5s
+                ease;
+        }
+
+        @keyframes heroEntrance {
+
+            from {
+                opacity: 0;
+                transform: translateY(60px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+
+        .small-title {
+
+            font-size: 18px;
+
+            letter-spacing: 5px;
+
+            text-transform: uppercase;
+
+            color: #ddd;
+
+            margin-bottom: 25px;
+        }
+
+        .hero h1 {
+
+            font-size:
+                clamp(
+                    55px,
+                    10vw,
+                    130px
+                );
+
+            line-height: 0.95;
+
+            font-weight: 900;
+
+            background:
+                linear-gradient(
+                    180deg,
+
+                    #ff9933 0%,
+                    #ff9933 33%,
+
+                    #ffffff 33%,
+                    #ffffff 66%,
+
+                    #138808 66%,
+                    #138808 100%
+                );
+
+            -webkit-background-clip: text;
+
+            color: transparent;
+
+            filter:
+                drop-shadow(
+                    0 0 25px
+                    rgba(255,255,255,0.15)
+                );
+
+            animation:
+                titlePulse
+                4s
+                ease-in-out
+                infinite;
+        }
+
+        @keyframes titlePulse {
+
+            0%,100% {
+
+                filter:
+                    drop-shadow(
+                        0 0 15px
+                        rgba(255,255,255,0.1)
+                    );
+            }
+
+            50% {
+
+                filter:
+                    drop-shadow(
+                        0 0 35px
+                        rgba(255,153,51,0.35)
+                    );
+            }
+
+        }
+
+        .hero h2 {
+
+            margin-top: 30px;
+
+            font-size:
+                clamp(
+                    24px,
+                    4vw,
+                    45px
+                );
+
+            font-weight: 500;
+        }
+
+        .hero p {
+
+            max-width: 700px;
+
+            margin: 25px auto;
+
+            color: #ddd;
+
+            font-size: 18px;
+
+            line-height: 1.7;
+        }
+
+        /* =========================
+           INDIAN FLAG
+        ========================== */
+
+        .flag-container {
+
+            margin:
+                50px auto 30px;
+
+            width: 320px;
+
+            animation:
+                flagFloat
+                4s
+                ease-in-out
+                infinite;
+        }
+
+        @keyframes flagFloat {
+
+            0%,100% {
+
+                transform:
+                    translateY(0)
+                    rotate(-1deg);
+            }
+
+            50% {
+
+                transform:
+                    translateY(-12px)
+                    rotate(1deg);
+            }
+
+        }
+
+        .flag {
+
+            width: 320px;
+            height: 210px;
+
+            position: relative;
+
+            overflow: hidden;
+
+            border-radius: 4px;
+
+            box-shadow:
+                0 15px 50px
+                rgba(0,0,0,0.5),
+
+                0 0 30px
+                rgba(255,255,255,0.1);
+
+            animation:
+                flagWave
+                4s
+                ease-in-out
+                infinite;
+        }
+
+        @keyframes flagWave {
+
+            0%,100% {
+
+                transform:
+                    perspective(500px)
+                    rotateY(0deg)
+                    skewY(0deg);
+            }
+
+            50% {
+
+                transform:
+                    perspective(500px)
+                    rotateY(-5deg)
+                    skewY(1deg);
+            }
+
+        }
+
+        .stripe {
+
+            height: 33.333%;
+
+            width: 100%;
+        }
+
+        .saffron {
+            background: #ff9933;
+        }
+
+        .white {
+
+            background: #ffffff;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+        }
+
+        .green {
+            background: #138808;
+        }
+
+        /* =========================
+           FULL ASHOKA CHAKRA
+        ========================== */
+
+        .chakra {
+
+            width: 64px;
+            height: 64px;
+
+            border:
+                4px solid
+                #000080;
+
+            border-radius: 50%;
+
+            position: relative;
+
+            animation:
+                rotateChakra
+                8s
+                linear
+                infinite;
+
+            flex-shrink: 0;
+        }
+
+        .chakra::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 8px;
+            height: 8px;
+
+            background: #000080;
+
+            border-radius: 50%;
+
+            left: 50%;
+            top: 50%;
+
+            transform:
+                translate(-50%, -50%);
+        }
+
+        /*
+            Each spoke starts from
+            the exact center and extends
+            toward the edge.
+        */
+
+        .spoke {
+
+            position: absolute;
+
+            width: 2px;
+            height: 27px;
+
+            background: #000080;
+
+            left: 50%;
+            top: 50%;
+
+            transform-origin:
+                50% 100%;
+        }
+
+        @keyframes rotateChakra {
+
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+
+        }
+
+        /* =========================
+           BUTTON
+        ========================== */
+
+        .btn {
+
+            display: inline-block;
+
+            margin-top: 20px;
+
+            padding:
+                15px 35px;
+
+            border-radius: 50px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #ff9933,
+                    #ffffff,
+                    #138808
+                );
+
+            color: #111;
+
+            font-weight: 800;
+
+            text-decoration: none;
+
+            box-shadow:
+                0 10px 30px
+                rgba(255,153,51,0.25);
+
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+
+            transform:
+                translateY(-5px)
+                scale(1.03);
+
+            box-shadow:
+                0 15px 40px
+                rgba(255,255,255,0.25);
+        }
+
+        /* =========================
+           SECTIONS
+        ========================== */
+
+        section {
+
+            padding:
+                100px 7%;
+        }
+
+        .section-title {
+
+            text-align: center;
+
+            font-size:
+                clamp(
+                    35px,
+                    5vw,
+                    60px
+                );
+
+            margin-bottom: 60px;
+        }
+
+        .section-title span {
+            color: #ff9933;
+        }
+
+        /* =========================
+           CARDS
+        ========================== */
+
+        .cards {
+
+            max-width: 1200px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(
+                    auto-fit,
+                    minmax(250px,1fr)
+                );
+
+            gap: 25px;
+        }
+
+        .card {
+
+            padding:
+                35px 25px;
+
+            border-radius: 20px;
+
+            background:
+                rgba(255,255,255,0.07);
+
+            border:
+                1px solid
+                rgba(255,255,255,0.12);
+
+            backdrop-filter:
+                blur(15px);
+
+            transition: 0.4s;
+
+            text-align: center;
+        }
+
+        .card:hover {
+
+            transform:
+                translateY(-12px);
+
+            border-color:
+                rgba(255,153,51,0.5);
+
+            box-shadow:
+                0 20px 50px
+                rgba(0,0,0,0.3);
+        }
+
+        .card-icon {
+
+            font-size: 50px;
+
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+
+            font-size: 24px;
+
+            margin-bottom: 15px;
+        }
+
+        .card p {
+
+            color: #ccc;
+
+            line-height: 1.7;
+        }
+
+        /* =========================
+           QUOTE
+        ========================== */
+
+        .quote-section {
+
+            text-align: center;
+
+            background:
+                linear-gradient(
+                    rgba(0,0,0,0.4),
+                    rgba(0,0,0,0.7)
+                );
+        }
+
+        .quote {
+
+            max-width: 900px;
+
+            margin: auto;
+
+            font-size:
+                clamp(
+                    25px,
+                    4vw,
+                    45px
+                );
+
+            font-weight: 700;
+
+            line-height: 1.4;
+        }
+
+        .quote::before {
+
+            content: "“";
+
+            font-size: 100px;
+
+            color: #ff9933;
+
+            display: block;
+
+            height: 70px;
+        }
+
+        .quote-author {
+
+            margin-top: 30px;
+
+            color: #138808;
+
+            font-weight: bold;
+
+            font-size: 20px;
+        }
+
+        /* =========================
+           COUNTDOWN
+        ========================== */
+
+        .countdown {
+
+            display: flex;
+
+            justify-content: center;
+
+            flex-wrap: wrap;
+
+            gap: 20px;
+        }
+
+        .time-box {
+
+            width: 130px;
+
+            padding:
+                25px 10px;
+
+            border-radius: 15px;
+
+            background:
+                rgba(255,255,255,0.08);
+
+            border:
+                1px solid
+                rgba(255,255,255,0.15);
+
+            text-align: center;
+        }
+
+        .time-box strong {
+
+            display: block;
+
+            font-size: 40px;
+
+            background:
+                linear-gradient(
+                    #ff9933,
+                    white,
+                    #138808
+                );
+
+            -webkit-background-clip: text;
+
+            color: transparent;
+        }
+
+        .time-box span {
+            color: #bbb;
+        }
+
+        /* =========================
+           FIREWORK
+        ========================== */
+
+        .firework {
+
+            position: fixed;
+
+            width: 5px;
+            height: 5px;
+
+            border-radius: 50%;
+
+            pointer-events: none;
+
+            z-index: 50;
+        }
+
+        /* =========================
+           FOOTER
+        ========================== */
+
+        .tricolor-line {
+
+            height: 5px;
+
+            width: 100%;
+
+            background:
+                linear-gradient(
+                    90deg,
+
+                    #ff9933 33%,
+
+                    white 33%,
+                    white 66%,
+
+                    #138808 66%
+                );
+        }
+
+        footer {
+
+            padding:
+                40px 20px;
+
+            text-align: center;
+
+            border-top:
+                1px solid
+                rgba(255,255,255,0.1);
+
+            color: #aaa;
+        }
+
+        footer strong {
+            color: white;
+        }
+
+        /* =========================
+           MOBILE
+        ========================== */
+
+        @media(max-width:700px) {
+
+            nav {
+
+                padding:
+                    15px 20px;
+            }
+
+            nav div:last-child {
+                display: none;
+            }
+
+            .hero {
+
+                padding-top:
+                    120px;
+            }
+
+            .flag-container {
+
+                width: 270px;
+            }
+
+            .flag {
+
+                width: 270px;
+
+                height:
+                    180px;
+            }
+
+            .chakra {
+
+                width: 55px;
+                height: 55px;
+            }
+
+            .spoke {
+
+                height: 23px;
+            }
+
+            section {
+
+                padding:
+                    80px 20px;
+            }
+
+            .time-box {
+
+                width: 100px;
+            }
+
+            .time-box strong {
+
+                font-size: 30px;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+    <!-- =========================
+         BACKGROUND
+    ========================== -->
+
+    <div class="background"></div>
+
+    <div class="glow orange"></div>
+
+    <div class="glow green"></div>
+
+    <div id="particles"></div>
+
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
+    <nav>
+
+        <div class="logo">
+
+            🇮🇳
+
+            <span>INDIA</span>
+
+        </div>
+
+        <div>
+
+            <a href="#home">
+                Home
+            </a>
+
+            <a href="#celebrate">
+                Celebrate
+            </a>
+
+            <a href="#message">
+                Message
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <main id="home">
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <div class="small-title">
+
+                    Proud to be Indian
+
+                </div>
+
+
+                <h1>
+
+                    HAPPY<br>
+
+                    INDEPENDENCE<br>
+
+                    DAY
+
+                </h1>
+
+
+                <h2>
+
+                    🇮🇳 Jai Hind 🇮🇳
+
+                </h2>
+
+
+                <p>
+
+                    Let us celebrate the spirit of freedom,
+                    unity, courage and the incredible journey
+                    of our great nation.
+
+                </p>
+
+
+                <!-- =========================
+                     INDIAN FLAG
+                ========================== -->
+
+                <div class="flag-container">
+
+                    <div class="flag">
+
+                        <!-- SAFFRON -->
+
+                        <div class="stripe saffron"></div>
+
+
+                        <!-- WHITE -->
+
+                        <div class="stripe white">
+
+                            <div class="chakra">
+
+                                <!-- 24 SPOKES -->
+
+                                <div class="spoke"
+                                    style="transform:translate(-50%,-100%) rotate(0deg)">
+                                </div>
+
+                                <div class="spoke"
+                                    style="transform:translate(-50%,-100%) rotate(15deg)">
+                                </div>
+
+                                <div class="spoke"
+                                    style="transform:translate(-50%,-100%) rotate(30deg)">
+                                </div>
+
+                                <div class="spoke"
+                                    style="transform:translate(-50%,-100%) rotate(45deg)">
+                                </div>
+
+                                <div class="spoke"
+                                    style="transform:translate(-50%,-100%) rotate(60deg)">
+                                </div>
+
+                                <div class="spoke"
+                                    style="transform:translate(-50%,-100%) rotate(75deg)">
+                                </div>
+
+                                <div class="spoke"
+                                    style="transform:translate(-50%,-100%) rotate(90deg)">
+                                </div>
+
+                                <div class="spoke"
+                                    style="transform:translate(-50%,-100%) rotate(105deg)">
+                                </div>
+
+                                <div class="spoke"
+                                    style="transform:translate(-50%,-100%) rotate(120deg)">
+                                </div>
+
+                                <div class="spoke"
+                                    style="transform:translate(-50%,-100%) rotate(135deg)">
+                                </div>
+
+                                <div class="spoke"
+                                    style="transform:translate(-50%,-100%) rotate(150deg)">
+                                </div>
+
+                                <div class="spoke"
+                                    style="transform:translate(-50%,-100%) rotate(165deg)">
+                                </div>
+
+                                <div class="spoke"
+                                    style="transform:translate(-50%,-100%) rotate(180deg)">
+                                </div>
+
+                                <div class="spoke"
+                                    style="transform:translate(-50%,-100%) rotate(195deg)">
+                                </div>
+
+                                <div class="spoke"
+                                    style="transform:translate(-50%,-100%) rotate(210deg)">
+                                </div>
+
+                                <div class="spoke"
+                                    style="transform:translate(-50%,-100%) rotate(225deg)">
+                                </div>
+
+                                <div class="spoke"
+                                    style="transform:translate(-50%,-100%) rotate(240deg)">
+                                </div>
+
+                                <div class="spoke"
+                                    style="transform:translate(-50%,-100%) rotate(255deg)">
+                                </div>
+
+                                <div class="spoke"
+                                    style="transform:translate(-50%,-100%) rotate(270deg)">
+                                </div>
+
+                                <div class="spoke"
+                                    style="transform:translate(-50%,-100%) rotate(285deg)">
+                                </div>
+
+                                <div class="spoke"
+                                    style="transform:translate(-50%,-100%) rotate(300deg)">
+                                </div>
+
+                                <div class="spoke"
+                                    style="transform:translate(-50%,-100%) rotate(315deg)">
+                                </div>
+
+                                <div class="spoke"
+                                    style="transform:translate(-50%,-100%) rotate(330deg)">
+                                </div>
+
+                                <div class="spoke"
+                                    style="transform:translate(-50%,-100%) rotate(345deg)">
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- GREEN -->
+
+                        <div class="stripe green"></div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- BUTTON -->
+
+                <a
+                    href="#celebrate"
+                    class="btn"
+                >
+
+                    🇮🇳 Celebrate Freedom
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             CELEBRATE INDIA
+        ========================== -->
+
+        <section id="celebrate">
+
+            <h2 class="section-title">
+
+                Celebrate
+                <span>India</span>
+
+            </h2>
+
+
+            <div class="cards">
+
+
+                <div class="card">
+
+                    <div class="card-icon">
+                        🇮🇳
+                    </div>
+
+                    <h3>
+                        Unity
+                    </h3>
+
+                    <p>
+
+                        Different cultures,
+                        languages and traditions
+                        united as one incredible nation.
+
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="card-icon">
+                        🕊️
+                    </div>
+
+                    <h3>
+                        Freedom
+                    </h3>
+
+                    <p>
+
+                        Let us remember the sacrifices
+                        made for our freedom and cherish
+                        it every day.
+
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="card-icon">
+                        💪
+                    </div>
+
+                    <h3>
+                        Strength
+                    </h3>
+
+                    <p>
+
+                        Together, we can build a stronger,
+                        brighter and more prosperous India.
+
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="card-icon">
+                        🚀
+                    </div>
+
+                    <h3>
+                        Future
+                    </h3>
+
+                    <p>
+
+                        Let us dream big and contribute
+                        to India's journey toward a better future.
+
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             MESSAGE
+        ========================== -->
+
+        <section
+            id="message"
+            class="quote-section"
+        >
+
+            <h2 class="section-title">
+
+                A Message of
+                <span>Freedom</span>
+
+            </h2>
+
+
+            <div class="quote">
+
+                Freedom is not just a word.
+                It is the responsibility to build
+                a better tomorrow.
+
+                <div class="quote-author">
+
+                    — Jai Hind 🇮🇳
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             COUNTDOWN
+        ========================== -->
+
+        <section>
+
+            <h2 class="section-title">
+
+                Independence Day
+                <span>Spirit</span>
+
+            </h2>
+
+
+            <div class="countdown">
+
+
+                <div class="time-box">
+
+                    <strong id="days">
+                        00
+                    </strong>
+
+                    <span>
+                        Days
+                    </span>
+
+                </div>
+
+
+                <div class="time-box">
+
+                    <strong id="hours">
+                        00
+                    </strong>
+
+                    <span>
+                        Hours
+                    </span>
+
+                </div>
+
+
+                <div class="time-box">
+
+                    <strong id="minutes">
+                        00
+                    </strong>
+
+                    <span>
+                        Minutes
+                    </span>
+
+                </div>
+
+
+                <div class="time-box">
+
+                    <strong id="seconds">
+                        00
+                    </strong>
+
+                    <span>
+                        Seconds
+                    </span>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <div class="tricolor-line"></div>
+
+
+    <footer>
+
+        <p>
+            Made with ❤️ for India
+        </p>
+
+        <br>
+
+        <strong>
+            🇮🇳 HAPPY INDEPENDENCE DAY 🇮🇳
+        </strong>
+
+        <br><br>
+
+        <p>
+            Unity • Peace • Progress • Freedom
+        </p>
+
+    </footer>
+
+
+    <script>
+
+        /* =========================
+           TRICOLOR PARTICLES
+        ========================== */
+
+        const particleContainer =
+            document.getElementById(
+                "particles"
+            );
+
+        const particleColors = [
+            "#ff9933",
+            "#ffffff",
+            "#138808"
+        ];
+
+
+        for (
+            let i = 0;
+            i < 80;
+            i++
+        ) {
+
+            const particle =
+                document.createElement(
+                    "div"
+                );
+
+            particle.className =
+                "particle";
+
+
+            const size =
+                Math.random() * 5 + 2;
+
+
+            particle.style.width =
+                size + "px";
+
+
+            particle.style.height =
+                size + "px";
+
+
+            particle.style.left =
+                Math.random() * 100 + "%";
+
+
+            particle.style.background =
+                particleColors[
+                    Math.floor(
+                        Math.random() *
+                        particleColors.length
+                    )
+                ];
+
+
+            particle.style.animationDuration =
+                Math.random() * 10 +
+                8 +
+                "s";
+
+
+            particle.style.animationDelay =
+                Math.random() * 10 +
+                "s";
+
+
+            particle.style.boxShadow =
+                "0 0 10px currentColor";
+
+
+            particleContainer.appendChild(
+                particle
+            );
+
+        }
+
+
+        /* =========================
+           COUNTDOWN
+        ========================== */
+
+        function updateCountdown() {
+
+            const now =
+                new Date();
+
+
+            let year =
+                now.getFullYear();
+
+
+            let independenceDay =
+                new Date(
+                    year,
+                    7,
+                    15,
+                    0,
+                    0,
+                    0
+                );
+
+
+            if (
+                now >
+                independenceDay
+            ) {
+
+                independenceDay =
+                    new Date(
+                        year + 1,
+                        7,
+                        15,
+                        0,
+                        0,
+                        0
+                    );
+
+            }
+
+
+            const difference =
+                independenceDay -
+                now;
+
+
+            const days =
+                Math.floor(
+                    difference /
+                    (
+                        1000 *
+                        60 *
+                        60 *
+                        24
+                    )
+                );
+
+
+            const hours =
+                Math.floor(
+                    difference /
+                    (
+                        1000 *
+                        60 *
+                        60
+                    )
+                ) % 24;
+
+
+            const minutes =
+                Math.floor(
+                    difference /
+                    (
+                        1000 *
+                        60
+                    )
+                ) % 60;
+
+
+            const seconds =
+                Math.floor(
+                    difference /
+                    1000
+                ) % 60;
+
+
+            document.getElementById(
+                "days"
+            ).textContent =
+                String(days)
+                .padStart(2, "0");
+
+
+            document.getElementById(
+                "hours"
+            ).textContent =
+                String(hours)
+                .padStart(2, "0");
+
+
+            document.getElementById(
+                "minutes"
+            ).textContent =
+                String(minutes)
+                .padStart(2, "0");
+
+
+            document.getElementById(
+                "seconds"
+            ).textContent =
+                String(seconds)
+                .padStart(2, "0");
+
+        }
+
+
+        updateCountdown();
+
+
+        setInterval(
+            updateCountdown,
+            1000
+        );
+
+
+        /* =========================
+           FIREWORKS
+        ========================== */
+
+        function createFirework(
+            x,
+            y
+        ) {
+
+            const colors = [
+                "#ff9933",
+                "#ffffff",
+                "#138808"
+            ];
+
+
+            for (
+                let i = 0;
+                i < 25;
+                i++
+            ) {
+
+                const spark =
+                    document.createElement(
+                        "div"
+                    );
+
+
+                spark.className =
+                    "firework";
+
+
+                spark.style.left =
+                    x + "px";
+
+
+                spark.style.top =
+                    y + "px";
+
+
+                spark.style.background =
+                    colors[
+                        Math.floor(
+                            Math.random() *
+                            colors.length
+                        )
+                    ];
+
+
+                const angle =
+                    Math.random() *
+                    Math.PI *
+                    2;
+
+
+                const distance =
+                    Math.random() *
+                    100 +
+                    40;
+
+
+                const targetX =
+                    Math.cos(angle) *
+                    distance;
+
+
+                const targetY =
+                    Math.sin(angle) *
+                    distance;
+
+
+                spark.animate(
+
+                    [
+                        {
+                            transform:
+                                "translate(0,0) scale(1)",
+
+                            opacity: 1
+                        },
+
+                        {
+                            transform:
+                                `translate(${targetX}px,${targetY}px) scale(0)`,
+
+                            opacity: 0
+                        }
+                    ],
+
+                    {
+
+                        duration:
+                            1000 +
+                            Math.random() *
+                            700,
+
+                        easing:
+                            "cubic-bezier(.1,.8,.2,1)"
+                    }
+
+                );
+
+
+                document.body.appendChild(
+                    spark
+                );
+
+
+                setTimeout(
+                    () =>
+                        spark.remove(),
+                    1800
+                );
+
+            }
+
+        }
+
+
+        /* Automatic fireworks */
+
+        setInterval(
+
+            () => {
+
+                const x =
+                    Math.random() *
+                    window.innerWidth;
+
+
+                const y =
+                    Math.random() *
+                    window.innerHeight *
+                    0.6;
+
+
+                createFirework(
+                    x,
+                    y
+                );
+
+            },
+
+            2500
+
+        );
+
+
+        /* Click fireworks */
+
+        document.addEventListener(
+
+            "click",
+
+            event => {
+
+                createFirework(
+                    event.clientX,
+                    event.clientY
+                );
+
+            }
+
+        );
+
+
+        /* =========================
+           CONSOLE MESSAGE
+        ========================== */
+
+        console.log(
+
+            "%c🇮🇳 Jai Hind! Happy Independence Day 🇮🇳",
+
+            "font-size:20px;font-weight:bold;"
+
+        );
+
+    </script>
+
+</body>
+</html>
